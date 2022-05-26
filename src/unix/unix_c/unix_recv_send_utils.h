@@ -32,13 +32,13 @@
 #include <sys/uio.h>
 
 #if OCAML_VERSION_MAJOR < 5
-#define unix_socket_domain_table socket_domain_table
-#define unix_socket_type_table socket_type_table
+#define caml_unix_socket_domain_table socket_domain_table
+#define caml_unix_socket_type_table socket_type_table
 #endif
 
 extern int msg_flag_table[];
-extern int unix_socket_domain_table[];
-extern int unix_socket_type_table[];
+extern int caml_unix_socket_domain_table[];
+extern int caml_unix_socket_type_table[];
 extern void get_sockaddr(value mladdr, union sock_addr_union *addr /*out*/,
                          socklen_t *addr_len /*out*/);
 value wrapper_recv_msg(int fd, int n_iovs, struct iovec *iovs);
