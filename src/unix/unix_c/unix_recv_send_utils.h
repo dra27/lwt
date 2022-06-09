@@ -31,11 +31,6 @@
 #include <sys/socket.h>
 #include <sys/uio.h>
 
-#if OCAML_VERSION_MAJOR < 5
-#define unix_socket_domain_table socket_domain_table
-#define unix_socket_type_table socket_type_table
-#endif
-
 extern int msg_flag_table[];
 extern int unix_socket_domain_table[];
 extern int unix_socket_type_table[];
