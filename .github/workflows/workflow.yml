@@ -95,6 +95,8 @@ jobs:
       - run: opam install lwt_ppx lwt_ppx_let --deps-only --with-test
         if: ${{ matrix.ppx == true }}
 
+      - run: opam pin add mingw-w64-shims git+https://github.com/dra27/mingw-w64-shims.git#internals
+
       - run: opam switch
 
       - run: opam list
