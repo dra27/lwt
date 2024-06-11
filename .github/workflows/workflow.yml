@@ -95,6 +95,10 @@ jobs:
       - run: opam install lwt_ppx lwt_ppx_let --deps-only --with-test
         if: ${{ matrix.ppx == true }}
 
+      - run: opam switch
+
+      - run: opam list
+
       - run: opam exec -- cmd /c set
 
 #      - run: opam exec -- where x86_64-w64-mingw32-ar
