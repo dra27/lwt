@@ -101,7 +101,7 @@ jobs:
 
       - run: opam var bin
 
-      - run: cmd /c dir D:\\a\\lwt\\lwt\\_opam\\bin
+      - run: cmd /c dir D:\a\lwt\lwt\_opam\bin
 
       - run: opam exec -- dune build --only-packages lwt_react,lwt
 
